@@ -1,8 +1,8 @@
 # create instance
 resource "aws_instance" "docker" {
   ami           = local.ami_id
-  instance_type = "t3.micro"
-  # instance_type = "t3.medium"    # because t3.micro doesnot support kubernetes
+  # instance_type = "t3.micro"
+  instance_type = "t3.medium"     # for roboshop to create 11 images we need higher 
   vpc_security_group_ids = [aws_security_group.allow-all-docker.id]
 
 # need more for terraform
