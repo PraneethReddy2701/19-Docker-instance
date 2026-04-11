@@ -5,5 +5,6 @@ locals {
     Project = var.project
     Environment = var.environment
     Terraform = "true"
+    Monitoring = "true"
   }
 }
